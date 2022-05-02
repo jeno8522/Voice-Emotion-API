@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="file" name="inputFile" id="inputFile">
+  <script type="text/javascript">
+    document.getElementById('inputFile').addEventListener('change', function () {
+      var file = new FileReader();
+      file.onload = () => {
+        var text = file.result;
+        fetch('https://voice-emotion.jp.ngrok.io', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            wav_base64: text
+          })
+        })
+          .then(res => res.json()).then
+          (res => {
+            console.log(res.emotion);
+          });
+
+      }
+      file.readAsText(this.files[0]);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+1. git clone을 한다.
+
+2. 'ngrok-v3-...' 폴더 내의 프로그램을 실행한다.
+
+3. 생성된 창에 다음을 입력 (pc 최초 한 번만 실행하면 됨. 다음부터는 이 단계 스킵 가능.)
+ngrok config add-authtoken 28bNXBPm255mvwELFbOTgIpzMmK_pr18WJVfnRdKuJFJ6PHy
+
+4. 생성된 창에 다음을 입력
+ngrok http --region=jp --hostname=voice-emotion.jp.ngrok.io 8080
+
+5. test 폴더 내의 index.html을 브라우저에서 오픈
+
+6. f12로 개발자 콘솔 시작
+
+7. test내의 txt 파일 아무거나 업로드 후 결과 확인
