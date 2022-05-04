@@ -1,9 +1,5 @@
-import json
-from pickle import FALSE
-import re
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from sklearn import exceptions
 import emotion_detection
 from emotion_detection import ParallelModel
 
@@ -23,10 +19,11 @@ def response():
         
         params = request.get_json()
         wav_base64 = params['wav_base64']
-        
         prd = emotion_detection.predict(wav_base64)
         
         data = {'emotion' : str(prd)}
+        
+        #angry, neutral, sadness, disgust, surprise, happiness, disgust
         return jsonify(data)
 
 if __name__ == "__main__":
