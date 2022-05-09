@@ -8,7 +8,7 @@
 ngrok config add-authtoken 28bNXBPm255mvwELFbOTgIpzMmK_pr18WJVfnRdKuJFJ6PHy
 
 4. 생성된 창에 다음을 입력
-ngrok http --region=jp --hostname=voice-emotion.jp.ngrok.io 8080
+ngrok http --region=jp --hostname=open-py.jp.ngrok.io 8080
 
 5. test 폴더 내의 index.html을 브라우저에서 오픈
 5-1. f12로 개발자 콘솔 시작
