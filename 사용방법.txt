@@ -1,7 +1,6 @@
 1. main.py 파일을 실행한다.
 1-1 python version은 3.9  이어야 함(다르면 오류 발생).
 1-2 pip3 install -r requirements.txt 최초 1회 실행
-1-3 pip3 install --upgrade google-cloud-language
 
 2. 'ngrok-v3-...' 폴더 내의 프로그램을 실행한다.
 
@@ -10,8 +9,3 @@ ngrok config add-authtoken 28bNXBPm255mvwELFbOTgIpzMmK_pr18WJVfnRdKuJFJ6PHy
 
 4. 생성된 창에 다음을 입력
 ngrok http --region=jp --hostname=open-py.jp.ngrok.io 8080
-
-5. test 폴더 내의 index.html을 브라우저에서 오픈
-5-1. f12로 개발자 콘솔 시작
-
-6. test내의 txt 파일 아무거나 업로드 후 결과 확인
