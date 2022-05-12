@@ -48,7 +48,7 @@ def analyzeEntities(text_content):
         # Get entity type, e.g. PERSON, LOCATION, ADDRESS, NUMBER, et al
         print(u"Entity type: {}".format(
             language_v1.Entity.Type(entity.type_).name))
-        sub_json["entity_type"] = entity.type_
+        sub_json["entity_type"] = language_v1.Entity.Type(entity.type_).name
         
         # Get the salience score associated with the entity in the [0, 1.0] range
         print(u"Salience score: {}".format(entity.salience))
