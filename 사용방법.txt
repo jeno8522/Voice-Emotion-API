@@ -9,3 +9,8 @@ ngrok config add-authtoken 28bNXBPm255mvwELFbOTgIpzMmK_pr18WJVfnRdKuJFJ6PHy
 
 4. 생성된 창에 다음을 입력
 ngrok http --region=jp --hostname=open-py.jp.ngrok.io 8080
+
+.\.venv\Scripts\activate
+py -3.9 -m venv .venv
+
+https://open-py.jp.ngrok.io/google-nlp
