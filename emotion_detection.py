@@ -131,7 +131,7 @@ def getEmotion(filename):
     predict_acc, t = torch.max(predict_acc, dim=1)
     predict_acc = predict_acc.detach().numpy()
     predict_acc = (int(predict_acc*100))/100
-    return predict, predict_acc
+    return predict[0], predict_acc
 
 
 def predict(wav_base64=None):
