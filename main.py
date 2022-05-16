@@ -19,9 +19,9 @@ def response_voice_emotion():
         
         params = request.get_json()
         wav_base64 = params['wav_base64']
-        prd = emotion_detection.predict(wav_base64)
+        prd, acc = emotion_detection.predict(wav_base64)
         
-        data = {'emotion' : str(prd)}
+        data = {'emotion' : str(prd), 'accuracy' : str(acc)}
         
         #angry, neutral, sadness, disgust, surprise, happiness, fear
         return jsonify(data)
