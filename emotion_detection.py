@@ -116,7 +116,7 @@ def getEmotion(filename):
 
     scaler = joblib.load("scaler.joblib")
     le = joblib.load("labelEncoder.joblib")
-    model = torch.load('model.pt', map_location='cpu')
+    model = torch.load('model_0516.pt', map_location='cpu')
 
     test_data = loadAudioFiles(filename)
 
